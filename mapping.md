@@ -16,9 +16,9 @@ URI for the INBO Catalog will be http://data.inbo.be/ipt#Catalog. The URI will b
 
 | predicate | resource or literal | type | mandatory | IPT resource |
 |---:|:---:|:---:|:---:|:---|
-|dct:title|literal|xsd:string|Y|[Ipt#name](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L26)|
-|dct:description|literal|xsd:string|Y|[Ipt#description](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/Ipt.java#L48)|
-|dct:publisher|resource|foaf:Agent|Y|with foaf:name [Organisation#name](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L26)|
+|dct:title|literal|xsd:string|Y|[Ipt#name](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L65)|
+|dct:description|literal|xsd:string|Y|[Ipt#description](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/Ipt.java#L47)|
+|dct:publisher|resource|foaf:Agent|Y|with foaf:name [Organisation#name](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L65)|
 |dcat:dataset|resource|dcat:Dataset|Y|links to dcat:Dataset URIs we create|
 
 ## dcat:Dataset
@@ -27,8 +27,8 @@ URI for an INBO dataset will be http://data.inbo.be/ipt/resource?r=bird-tracking
 
 | predicate |  resource or literal | type | mandatory | IPT resource |
 |---:|:---:|:---:|:---:|:---|
-|dct:title|literal|xsd:string|Y|[Resource#title](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/Resource.java#L633)|
-|dct:description|literal|xsd:string|Y|?|
+|dct:title|literal|xsd:string|Y|[Eml#title](https://github.com/gbif/gbif-metadata-profile/blob/master/src/main/java/org/gbif/metadata/eml/Eml.java#L715)|
+|dct:description|literal|xsd:string|Y|[Eml#description](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/Ipt.java#L47)|
 
 ## dcat:Distribution
 For each dataset, we'll link 1 distribution: the darwin core zip file. URI for an INBO distribution will be the link to the zip file itself.
