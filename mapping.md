@@ -16,16 +16,16 @@ URI for the INBO Catalog will be http://data.inbo.be/ipt#Catalog
 
 | predicate |  resource or literal | type | mandatory | IPT resource |
 |---:|:---:|:---:|:---:|:---|
-|dct:title|literal|xsd:string|Y|(admin.ipt.name)[https://github.com/gbif/ipt/blob/e478aa2fd68926cb1df89ab0bf5b4eae17933d0a/src/main/resources/ApplicationResources_en.properties#L573]|
-|dct:description|literal|xsd:string|Y|(admin.ipt.description)[https://github.com/gbif/ipt/blob/e478aa2fd68926cb1df89ab0bf5b4eae17933d0a/src/main/resources/ApplicationResources_en.properties#L574]|
-|dct:publisher|resource|foaf:Agent|with foaf:name (admin.organisation.name)[https://github.com/gbif/ipt/blob/e478aa2fd68926cb1df89ab0bf5b4eae17933d0a/src/main/resources/ApplicationResources_en.properties#L611]|
+|dct:title|literal|xsd:string|Y|[admin.ipt.name](https://github.com/gbif/ipt/blob/e478aa2fd68926cb1df89ab0bf5b4eae17933d0a/src/main/resources/ApplicationResources_en.properties#L573)|
+|dct:description|literal|xsd:string|Y|[admin.ipt.description](https://github.com/gbif/ipt/blob/e478aa2fd68926cb1df89ab0bf5b4eae17933d0a/src/main/resources/ApplicationResources_en.properties#L574)|
+|dct:publisher|resource|foaf:Agent|with foaf:name [admin.organisation.name](https://github.com/gbif/ipt/blob/e478aa2fd68926cb1df89ab0bf5b4eae17933d0a/src/main/resources/ApplicationResources_en.properties#L611)|
 
 ## dcat:Dataset
 
 
 | predicate |  resource or literal | type | mandatory | IPT resource |
 |---:|:---:|:---:|:---:|:---|
-|dct:title|literal|xsd:string|Y|(manage.resource.create.title)[https://github.com/gbif/ipt/blob/e478aa2fd68926cb1df89ab0bf5b4eae17933d0a/src/main/resources/ApplicationResources_en.properties#L701]|
+|dct:title|literal|xsd:string|Y|[manage.resource.create.title](https://github.com/gbif/ipt/blob/e478aa2fd68926cb1df89ab0bf5b4eae17933d0a/src/main/resources/ApplicationResources_en.properties#L701)|
 |dct:description|literal|xsd:string|Y|?|
 
 
