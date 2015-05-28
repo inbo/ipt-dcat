@@ -12,12 +12,12 @@
 
 ## dcat:Catalog
 
-URI for the INBO Catalog will be http://data.inbo.be/ipt#Catalog. The URI will become dereferenceable using RDFa. In RDFa, a rdfs:seeAlso link will be given to the actual DCAT document which contains the entire feed.
+URI for the INBO Catalog will be http://data.inbo.be/ipt#Catalog. The URI will become dereferenceable using RDFa. In RDFa, a `rdfs:seeAlso` link will be given to the actual DCAT document which contains the entire feed.
 
-| predicate |  resource or literal | type | mandatory | IPT resource |
+| predicate | resource or literal | type | mandatory | IPT resource |
 |---:|:---:|:---:|:---:|:---|
-|dct:title|literal|xsd:string|Y|[admin.ipt.name](https://github.com/gbif/ipt/blob/e478aa2fd68926cb1df89ab0bf5b4eae17933d0a/src/main/resources/ApplicationResources_en.properties#L573)|
-|dct:description|literal|xsd:string|Y|[admin.ipt.description](https://github.com/gbif/ipt/blob/e478aa2fd68926cb1df89ab0bf5b4eae17933d0a/src/main/resources/ApplicationResources_en.properties#L574)|
+|dct:title|literal|xsd:string|Y|[Ipt#name](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L26)|
+|dct:description|literal|xsd:string|Y|[Ipt#description](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/Ipt.java#L48)|
 |dct:publisher|resource|foaf:Agent|Y|with foaf:name [admin.organisation.name](https://github.com/gbif/ipt/blob/e478aa2fd68926cb1df89ab0bf5b4eae17933d0a/src/main/resources/ApplicationResources_en.properties#L611)|
 |dcat:dataset|resource|dcat:Dataset|Y|links to dcat:Dataset URIs we create|
 
