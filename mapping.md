@@ -12,26 +12,26 @@
 
 ## dcat:Catalog
 
-URI for the INBO Catalog will be http://data.inbo.be/ipt#Catalog
+URI for the INBO Catalog will be http://data.inbo.be/ipt#Catalog. The URI will become dereferenceable using RDFa. In RDFa, a rdfs:seeAlso link will be given to the actual DCAT document which contains the entire feed.
 
 | predicate |  resource or literal | type | mandatory | IPT resource |
 |---:|:---:|:---:|:---:|:---|
 |dct:title|literal|xsd:string|Y|[admin.ipt.name](https://github.com/gbif/ipt/blob/e478aa2fd68926cb1df89ab0bf5b4eae17933d0a/src/main/resources/ApplicationResources_en.properties#L573)|
 |dct:description|literal|xsd:string|Y|[admin.ipt.description](https://github.com/gbif/ipt/blob/e478aa2fd68926cb1df89ab0bf5b4eae17933d0a/src/main/resources/ApplicationResources_en.properties#L574)|
-|dct:publisher|resource|foaf:Agent|with foaf:name [admin.organisation.name](https://github.com/gbif/ipt/blob/e478aa2fd68926cb1df89ab0bf5b4eae17933d0a/src/main/resources/ApplicationResources_en.properties#L611)|
+|dct:publisher|resource|foaf:Agent|Y|with foaf:name [admin.organisation.name](https://github.com/gbif/ipt/blob/e478aa2fd68926cb1df89ab0bf5b4eae17933d0a/src/main/resources/ApplicationResources_en.properties#L611)|
+|dcat:dataset|resource|dcat:Dataset|Y|links to dcat:Dataset URIs we create|
 
 ## dcat:Dataset
 
+URI for an INBO dataset will be http://data.inbo.be/ipt/resource?r=belgian-coccinellidae-inbo-occurrences#Dataset. The URI will become dereferenceable using RDFa. In RDFa, a rdfs:seeAlso link will be given to the document with the entire DCAT feed (which will include this URI).
 
 | predicate |  resource or literal | type | mandatory | IPT resource |
 |---:|:---:|:---:|:---:|:---|
 |dct:title|literal|xsd:string|Y|[manage.resource.create.title](https://github.com/gbif/ipt/blob/e478aa2fd68926cb1df89ab0bf5b4eae17933d0a/src/main/resources/ApplicationResources_en.properties#L701)|
 |dct:description|literal|xsd:string|Y|?|
 
-
 ## dcat:Distribution
-
-For each dataset, we'll link 1 distribution: the darwin core zip file
+For each dataset, we'll link 1 distribution: the darwin core zip file. URI for an INBO distribution will be the link to the zip file itself.
 
 | predicate |  resource or literal | type | mandatory | IPT resource |
 |---:|:---:|:---:|:---:|:---|
