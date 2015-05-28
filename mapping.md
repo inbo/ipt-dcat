@@ -12,7 +12,7 @@
 
 ## dcat:Catalog
 
-URI for the INBO Catalog will be http://data.inbo.be/ipt#Catalog. The URI will become dereferenceable using RDFa. In RDFa, a `rdfs:seeAlso` link will be given to the actual DCAT document which contains the entire feed.
+URI for the INBO Catalog will be http://data.inbo.be/ipt#Catalog. The URI will become dereferenceable using RDFa. In RDFa, a `rdfs:seeAlso` link will be given to a document which contains the entire DCAT feed.
 
 | predicate | resource or literal | type | mandatory | IPT resource |
 |---:|:---:|:---:|:---:|:---|
@@ -23,11 +23,11 @@ URI for the INBO Catalog will be http://data.inbo.be/ipt#Catalog. The URI will b
 
 ## dcat:Dataset
 
-URI for an INBO dataset will be http://data.inbo.be/ipt/resource?r=belgian-coccinellidae-inbo-occurrences#Dataset. The URI will become dereferenceable using RDFa. In RDFa, a rdfs:seeAlso link will be given to the document with the entire DCAT feed (which will include this URI).
+URI for an INBO dataset will be http://data.inbo.be/ipt/resource?r=bird-tracking-gull-occurrences#Dataset. The URI will become dereferenceable using RDFa. In RDFa, a `rdfs:seeAlso` link will be given to a document which contains the entire DCAT feed (including this URI).
 
 | predicate |  resource or literal | type | mandatory | IPT resource |
 |---:|:---:|:---:|:---:|:---|
-|dct:title|literal|xsd:string|Y|[manage.resource.create.title](https://github.com/gbif/ipt/blob/e478aa2fd68926cb1df89ab0bf5b4eae17933d0a/src/main/resources/ApplicationResources_en.properties#L701)|
+|dct:title|literal|xsd:string|Y|[Resource#title](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/Resource.java#L633)|
 |dct:description|literal|xsd:string|Y|?|
 
 ## dcat:Distribution
