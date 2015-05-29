@@ -9,7 +9,7 @@
 | rdfs:| `http://www.w3.org/2000/01/rdf-schema#`|
 | foaf:| `http://xmlns.com/foaf/0.1/`|
 | schema:| `http://schema.org/`|
-| adms:| ``|
+| adms:| `http://www.w3.org/ns/adms#`|
 
 ## dcat:Catalog
 
@@ -30,7 +30,7 @@ URI for the INBO Catalog will be http://data.inbo.be/ipt#Catalog. The URI will b
 
 ## dcat:Dataset
 
-URI for an INBO Dataset will be http://data.inbo.be/ipt/resource?r=bird-tracking-gull-occurrences#Dataset. The URI will become dereferenceable using RDFa. In RDFa, a `rdfs:seeAlso` link will be given to a document which contains the entire DCAT feed (including this URI).
+URI for an INBO dataset will be http://data.inbo.be/ipt/resource?r=bird-tracking-gull-occurrences#Dataset. The URI will become dereferenceable using RDFa. In RDFa, a `rdfs:seeAlso` link will be given to a document which contains the entire DCAT feed (including this URI).
 
 | predicate |  resource or literal | type | mandatory | IPT resource |
 |---:|:---:|:---:|:---:|:---|
@@ -45,11 +45,14 @@ URI for an INBO Dataset will be http://data.inbo.be/ipt/resource?r=bird-tracking
 |adms:versionInfo|literal|||_todo_|
 |adms:versionNotes|literal|||_todo_|
 |adms:contactPoint|resource|vcard:Kind||_todo_|
+|dcat:landingPage|resource|||html where you can choose your downloads. E.g., http://data.inbo.be/ipt/resource?r=bird-tracking-gull-occurrences|
 
 ## dcat:Distribution
-For each dataset, we'll link 1 distribution: the Darwin Core Archive (a zip file). URI for an IPT Distribution will be the link to the zip file itself.
+For each dataset, we'll link 1 distribution: the darwin core zip file. URI for an INBO distribution will be the link to the zip file itself.
 
 | predicate |  resource or literal | type | mandatory | IPT resource |
 |---:|:---:|:---:|:---:|:---|
-|dct:title|literal|xsd:string|Y|"Darwin Core Archive"|
-|dct:description|literal|xsd:string|Y|"..."|
+|dct:description|literal|xsd:string|Y|"Darwin core zip file"|
+|dct:license|resource|dct:LicenseDocument|Y|https://creativecommons.org/publicdomain/zero/1.0/|
+|dcat:mediaType|resource|dct:MediaTypeOrExtent|Y||
+|dcat:downloadURL|resource|||same URI|
