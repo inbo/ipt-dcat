@@ -30,7 +30,7 @@ URI for the INBO Catalog will be http://data.inbo.be/ipt#Catalog. The URI will b
 
 ## dcat:Dataset
 
-URI for an INBO dataset will be http://data.inbo.be/ipt/resource?r=bird-tracking-gull-occurrences#Dataset. The URI will become dereferenceable using RDFa. In RDFa, a `rdfs:seeAlso` link will be given to a document which contains the entire DCAT feed (including this URI).
+URI for an INBO Dataset will be http://data.inbo.be/ipt/resource?r=bird-tracking-gull-occurrences#Dataset. The URI will become dereferenceable using RDFa. In RDFa, a `rdfs:seeAlso` link will be given to a document which contains the entire DCAT feed (including this URI).
 
 | predicate |  resource or literal | type | mandatory | IPT resource |
 |---:|:---:|:---:|:---:|:---|
@@ -47,12 +47,9 @@ URI for an INBO dataset will be http://data.inbo.be/ipt/resource?r=bird-tracking
 |adms:contactPoint|resource|vcard:Kind||_todo_|
 
 ## dcat:Distribution
-For each dataset, we'll link 1 distribution: the darwin core zip file. URI for an INBO distribution will be the link to the zip file itself.
+For each dataset, we'll link 1 distribution: the Darwin Core Archive (a zip file). URI for an IPT Distribution will be the link to the zip file itself.
 
 | predicate |  resource or literal | type | mandatory | IPT resource |
 |---:|:---:|:---:|:---:|:---|
-|dct:title|literal|xsd:string|Y|"Darwin core zip file"|
+|dct:title|literal|xsd:string|Y|"Darwin Core Archive"|
 |dct:description|literal|xsd:string|Y|"..."|
-
-
-

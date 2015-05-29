@@ -7,4 +7,5 @@ This project aims to make the [GBIF Integrated Publish Toolkit (IPT)](https://gi
 ## Resources
 
 * [Fork of the IPT source code](https://github.com/LifeWatchINBO/ipt): this is where we'll implement the DCAT-AP functionality
+* [DCAT-AP model](http://dcat.be/images/dcat-ap.png): image of the DCAT-AP objects, properties and relationships.
 * [DCAT-AP validator](https://validator.dcat-editor.com/): in Swedish, but should work for Belgian DCAT-AP too
