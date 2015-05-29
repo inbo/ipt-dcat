@@ -9,6 +9,7 @@
 | rdfs:| `http://www.w3.org/2000/01/rdf-schema#`|
 | foaf:| `http://xmlns.com/foaf/0.1/`|
 | schema:| `http://schema.org/`|
+| adms:| ``|
 
 ## dcat:Catalog
 
@@ -20,6 +21,12 @@ URI for the INBO Catalog will be http://data.inbo.be/ipt#Catalog. The URI will b
 |dct:description|literal|xsd:string|Y|[Ipt#description](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/Ipt.java#L47)|
 |dct:publisher|resource|foaf:Agent|Y|with foaf:name [Organisation#name](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L65)|
 |dcat:dataset|resource|dcat:Dataset|Y|links to dcat:Dataset URIs we create|
+|foaf:homepage|resource|||http://data.inbo.be/ipt|
+|dct:rights|resource|||_a URI to CC0?_|
+|dct:issued|literal|xsd:DateTime||date of creation|
+|dct:modified|literal|xsd:DateTime||date of last modification|
+|dcat:themeTaxonomy|resource|skos:ConceptScheme||_todo_|
+|dct:spatial|resource|dct:Location||_todo_|
 
 ## dcat:Dataset
 
@@ -29,6 +36,15 @@ URI for an INBO dataset will be http://data.inbo.be/ipt/resource?r=bird-tracking
 |---:|:---:|:---:|:---:|:---|
 |dct:title|literal|xsd:string|Y|[Eml#title](https://github.com/gbif/gbif-metadata-profile/blob/master/src/main/java/org/gbif/metadata/eml/Eml.java#L715)|
 |dct:description|literal|xsd:string|Y|[Eml#description](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/Ipt.java#L47)|
+|dcat:theme|resource|skos:Concept||default to Eurovoc URI for biodiversity|
+|dcat:keyword|literal|xsd:string|||
+|dct:issued|literal|xsd:DateTime||date of creation|
+|dct:modified|literal|xsd:DateTime||date of last modification|
+|dct:isVersionOf|resource|dcat:Dataset||_Separate versions can be different resources which point to a generic dataset_|
+|dct:spatial|resource|dct:Location||_todo_|
+|adms:versionInfo|literal|||_todo_|
+|adms:versionNotes|literal|||_todo_|
+|adms:contactPoint|resource|vcard:Kind||_todo_|
 
 ## dcat:Distribution
 For each dataset, we'll link 1 distribution: the darwin core zip file. URI for an INBO distribution will be the link to the zip file itself.
