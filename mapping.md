@@ -32,7 +32,7 @@ Mandatory concepts are indicated in bold.
 |dct:issued|literal|xsd:DateTime|date of creation||
 |dct:modified|literal|xsd:DateTime|date of last modification||
 |dcat:themeTaxonomy|resource|skos:ConceptScheme|_todo_||
-|dct:spatial|resource|dct:Location|There is a latitude/longitude in the IPT settings||
+|dct:spatial|resource|dct:Location|[IPT#Latitude](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/config/AppConfig.java#L145), [IPT#Longitude](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/config/AppConfig.java#L157)||
 
 ## dcat:Dataset
 
