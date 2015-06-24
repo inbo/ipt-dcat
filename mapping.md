@@ -60,11 +60,18 @@ Mandatory concepts are indicated in bold.
 |dcat:landingPage|resource|||http://data.inbo.be/ipt/resource?r=bird-tracking-gull-occurrences|
 
 ## dcat:Distribution
-For each dataset, we'll link 1 distribution: the darwin core zip file. URI for an INBO distribution will be the link to the zip file itself.
 
-| predicate |  resource or literal | type | mandatory | IPT resource |
-|---:|:---:|:---:|:---:|:---|
-|dct:description|literal|xsd:string|Y|"Darwin core zip file"|
-|dct:license|resource|dct:LicenseDocument|Y|https://creativecommons.org/publicdomain/zero/1.0/|
-|dcat:mediaType|resource|dct:MediaTypeOrExtent|Y||
-|dcat:downloadURL|resource|||same URI|
+### URI
+
+For each dataset, we'll link to 1 distribution: the Darwin Core Zip file. The URI for such a distribution will be the link to the zip file itself. We ignore EML and RTF distributions, as they do not contain data, only metadata.
+
+### Concepts
+
+Mandatory concepts are indicated in bold.
+
+| predicate |  resource or literal | type | IPT concept | example |
+|---:|:---:|:---:|:---|:---|
+|**dct:description**|literal|xsd:string|`Darwin Core Archive`||
+|**dct:license**|resource|dct:LicenseDocument||https://creativecommons.org/publicdomain/zero/1.0/|
+|**dcat:mediaType**|resource|dct:MediaTypeOrExtent|||
+|dcat:downloadURL|resource||same URI|http://data.inbo.be/ipt/archive.do?r=bird-tracking-gull-occurrences|
