@@ -1,4 +1,4 @@
-# Mapping of the IPT fields to RDF DCAT
+# Mapping of RDF DCAT to IPT concepts
 
 | namespace prefix | base URIs |
 |----:|:----|
@@ -13,20 +13,26 @@
 
 ## dcat:Catalog
 
-URI for the INBO Catalog will be http://data.inbo.be/ipt#Catalog. The URI will become dereferenceable using RDFa. In RDFa, a `rdfs:seeAlso` link will be given to a document which contains the entire DCAT feed.
+### URI
 
-| predicate | resource or literal | type | mandatory | IPT resource | example |
-|---:|:---:|:---:|:---:|:---|:---|
-|dct:title|literal|xsd:string|Y|[Ipt#name](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L65)|INBO IPT|
-|dct:description|literal|xsd:string|Y|[Ipt#description](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/Ipt.java#L47)|The INBO IPT is hosted at the Research Institute for Nature and Forest (INBO) in Brussels, Belgium.|
-|dct:publisher|resource|foaf:Agent|Y|with foaf:name [Organisation#name](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L65)|Research Institute for Nature and Forest (INBO)|
-|dcat:dataset|resource|dcat:Dataset|Y|links to dcat:Dataset URIs we create|http://data.inbo.be/ipt/resource?r=bird-tracking-gull-occurrences#Dataset|
-|foaf:homepage|resource||||http://data.inbo.be/ipt|
-|dct:rights|resource||||https://creativecommons.org/publicdomain/zero/1.0/|
-|dct:issued|literal|xsd:DateTime||date of creation||
-|dct:modified|literal|xsd:DateTime||date of last modification||
-|dcat:themeTaxonomy|resource|skos:ConceptScheme||_todo_||
-|dct:spatial|resource|dct:Location||There is a latitude/longitude in IPT settings||
+URI for the IPT catalog will be `http://homepage-of-ipt#Catalog` (e.g. http://data.inbo.be/ipt#Catalog). The URI will become dereferenceable using RDFa. In RDFa, a `rdfs:seeAlso` link will be given to a document which contains the entire DCAT feed.
+
+### Concepts
+
+Mandatory concepts are indicated in bold.
+
+| predicate | resource or literal | type | IPT concept | example |
+|---:|:---:|:---:|:---|:---|
+|**dct:title**|literal|xsd:string|[Ipt#name](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L65)|INBO IPT|
+|**dct:description**|literal|xsd:string|[Ipt#description](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/Ipt.java#L47)|The INBO IPT is hosted at the Research Institute for Nature and Forest (INBO) in Brussels, Belgium.|
+|**dct:publisher**|resource|foaf:Agent|with foaf:name [Organisation#name](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L65)|Research Institute for Nature and Forest (INBO)|
+|**dcat:dataset**|resource|dcat:Dataset|links to dcat:Dataset URIs we create|http://data.inbo.be/ipt/resource?r=bird-tracking-gull-occurrences#Dataset|
+|foaf:homepage|resource|||http://data.inbo.be/ipt|
+|dct:rights|resource|||https://creativecommons.org/publicdomain/zero/1.0/|
+|dct:issued|literal|xsd:DateTime|date of creation||
+|dct:modified|literal|xsd:DateTime|date of last modification||
+|dcat:themeTaxonomy|resource|skos:ConceptScheme|_todo_||
+|dct:spatial|resource|dct:Location|There is a latitude/longitude in the IPT settings||
 
 ## dcat:Dataset
 
