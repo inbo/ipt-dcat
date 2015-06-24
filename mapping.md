@@ -15,7 +15,7 @@
 
 ### URI
 
-URI for the IPT catalog will be `http://homepage-of-ipt#Catalog` (e.g. http://data.inbo.be/ipt#Catalog). The URI will become dereferenceable using RDFa. In RDFa, a `rdfs:seeAlso` link will be given to a document which contains the entire DCAT feed.
+The URI for the IPT catalog will be `http://homepage-of-ipt#Catalog` (e.g. http://data.inbo.be/ipt#Catalog). The URI will become dereferenceable using RDFa. In RDFa, a `rdfs:seeAlso` link will be given to a document which contains the entire DCAT feed.
 
 ### Concepts
 
@@ -36,22 +36,28 @@ Mandatory concepts are indicated in bold.
 
 ## dcat:Dataset
 
-URI for an INBO dataset will be http://data.inbo.be/ipt/resource?r=bird-tracking-gull-occurrences#Dataset. The URI will become dereferenceable using RDFa. In RDFa, a `rdfs:seeAlso` link will be given to a document which contains the entire DCAT feed (including this URI).
+## URI
 
-| predicate |  resource or literal | type | mandatory | IPT resource |
-|---:|:---:|:---:|:---:|:---|
-|dct:title|literal|xsd:string|Y|[Eml#title](https://github.com/gbif/gbif-metadata-profile/blob/master/src/main/java/org/gbif/metadata/eml/Eml.java#L715)|
-|dct:description|literal|xsd:string|Y|[Eml#description](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/Ipt.java#L47)|
-|dcat:theme|resource|skos:Concept||default to Eurovoc URI for biodiversity|
-|dcat:keyword|literal|xsd:string|||
-|dct:issued|literal|xsd:DateTime||date of creation|
-|dct:modified|literal|xsd:DateTime||date of last modification|
-|dct:isVersionOf|resource|dcat:Dataset||_Separate versions can be different resources which point to a generic dataset_|
-|dct:spatial|resource|dct:Location||_todo_|
-|adms:versionInfo|literal|||_todo_|
-|adms:versionNotes|literal|||_todo_|
-|adms:contactPoint|resource|vcard:Kind||_todo_|
-|dcat:landingPage|resource|||html where you can choose your downloads. E.g., http://data.inbo.be/ipt/resource?r=bird-tracking-gull-occurrences|
+The URI for an IPT dataset will be `http://homepage-of-ipt/resource?r=dataset-name#dataset` (e.g. http://data.inbo.be/ipt/resource?r=bird-tracking-gull-occurrences#Dataset). The URI will become dereferenceable using RDFa. In RDFa, a `rdfs:seeAlso` link will be given to a document which contains the entire DCAT feed (including this URI).
+
+## Concepts
+
+Mandatory concepts are indicated in bold.
+
+| predicate | resource or literal | type | IPT concept | example |
+|---:|:---:|:---:|:---|:---|
+|**dct:title**|literal|xsd:string|[Eml#title](https://github.com/gbif/gbif-metadata-profile/blob/master/src/main/java/org/gbif/metadata/eml/Eml.java#L715)|Bird tracking - GPS tracking of Lesser Black-backed Gull and Herring Gull breeding at the Belgian coast|
+|**dct:description**|literal|xsd:string|[Eml#description](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/Ipt.java#L47)|Bird tracking - GPS tracking of Lesser Black-backed Gull and Herring Gull breeding at the Belgian coast is a species occurrence dataset published by the Research Institute for Nature and Forest (INBO). The dataset curently ...|
+|dcat:theme|resource|skos:Concept|default to Eurovoc URI for biodiversity|
+|dcat:keyword|literal|xsd:string||animal movement|
+|dct:issued|literal|xsd:DateTime|date of creation||
+|dct:modified|literal|xsd:DateTime|date of last modification||
+|dct:isVersionOf|resource|dcat:Dataset|_Separate versions can be different resources which point to a generic dataset_||
+|dct:spatial|resource|dct:Location|_todo_||
+|adms:versionInfo|literal||_todo_||
+|adms:versionNotes|literal||_todo_||
+|adms:contactPoint|resource|vcard:Kind|_todo_||
+|dcat:landingPage|resource||html where you can choose your downloads.|http://data.inbo.be/ipt/resource?r=bird-tracking-gull-occurrences|
 
 ## dcat:Distribution
 For each dataset, we'll link 1 distribution: the darwin core zip file. URI for an INBO distribution will be the link to the zip file itself.
