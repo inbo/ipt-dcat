@@ -73,6 +73,6 @@ Mandatory concepts are indicated in bold.
 |---:|:---:|:---:|:---|:---|
 |**dct:description**|literal|xsd:string|`Darwin Core Archive`||
 |**dct:license**|resource|dct:LicenseDocument||https://creativecommons.org/publicdomain/zero/1.0/|
-|**dcat:mediaType**|resource|dct:MediaTypeOrExtent|`application/zip`||
-|**dct:format**|resource|dct:MediaTypeOrExtent|`dwc-a`||
+|**dcat:mediaType**|resource|dct:MediaTypeOrExtent||`application/zip`||
+|**dct:format**|resource|dct:MediaTypeOrExtent||`dwc-a`||
 |**dcat:downloadURL**|resource||same URI|http://data.inbo.be/ipt/archive.do?r=bird-tracking-gull-occurrences|
