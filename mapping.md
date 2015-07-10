@@ -47,7 +47,7 @@ Mandatory concepts are indicated in bold.
 | predicate | resource or literal | type | IPT concept | example |
 |---:|:---:|:---:|:---|:---|
 |**dct:title**|literal|xsd:string|[Eml#Title](https://github.com/gbif/gbif-metadata-profile/blob/master/src/main/java/org/gbif/metadata/eml/Eml.java#L715)|Bird tracking - GPS tracking of Lesser Black-backed Gull and Herring Gull breeding at the Belgian coast|
-|**dct:description**|literal|xsd:string|[Eml#Description](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/Ipt.java#L47)|Bird tracking - GPS tracking of Lesser Black-backed Gull and Herring Gull breeding at the Belgian coast is a species occurrence dataset published by the Research Institute for Nature and Forest (INBO). The dataset curently ...|
+|**dct:description**|literal|xsd:string|[Concatenation of Eml#Description](https://github.com/gbif/gbif-metadata-profile/blob/master/src/main/java/org/gbif/metadata/eml/Eml.java#L753)|Bird tracking - GPS tracking of Lesser Black-backed Gull and Herring Gull breeding at the Belgian coast is a species occurrence dataset published by the Research Institute for Nature and Forest (INBO). The dataset curently ...|
 |dcat:theme|resource|skos:Concept|default to Eurovoc URI for biodiversity|
 |dcat:keyword|literal|xsd:string|[EML#Keywords](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/Ipt.java#L47)|animal movement|
 |dct:issued|literal|xsd:DateTime|date of creation||
