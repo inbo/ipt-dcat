@@ -58,7 +58,7 @@ dct:spatial|resource|dct:Location|1|[EML#BoundingCoordinates](https://github.com
 adms:versionInfo|literal||1|_todo_|
 adms:versionNotes|literal||1|Admins can enter version notes with each publication|
 adms:contactPoint|resource|vcard:Kind|M|[EML#Contacts](https://github.com/gbif/gbif-metadata-profile/blob/3c312d84f62fb3efbeca08e4fc9178ac4dfe5397/src/main/java/org/gbif/metadata/eml/Eml.java#L356)|`[a vcard:Individual; vcard:fn "Eric Stienen"; vcard:hasEmail <mailto:eric.stienen@inbo.be>]`
-dcat:landingPage|resource||1||`http://data.inbo.be/ipt/resource?r=bird-tracking-gull-occurrences`
+dcat:landingPage|resource||1|Resource URL or DOI|`http://data.inbo.be/ipt/resource?r=bird-tracking-gull-occurrences`
 
 ## dcat:Distribution
 
