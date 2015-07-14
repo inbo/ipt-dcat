@@ -51,7 +51,7 @@ Mandatory concepts are indicated in bold.
 |dcat:theme|resource|skos:Concept|default to Eurovoc URI for biodiversity|
 |dcat:keyword|literal|xsd:string|[EML#Keywords](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/Ipt.java#L47)|animal movement|
 |dct:issued|literal|xsd:DateTime|date of creation||
-|dct:modified|literal|xsd:DateTime|date of last modification||
+|dct:modified|literal|xsd:DateTime|[Resource#LastPublished](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/Resource.java#L449)|2015-05-07|
 |dct:isVersionOf|resource|dcat:Dataset|_Separate versions can be different resources which point to a generic dataset_||
 |dct:spatial|resource|dct:Location|[EML#BoundingCoordinates](https://github.com/gbif/gbif-metadata-profile/blob/master/src/main/java/org/gbif/metadata/eml/GeospatialCoverage.java#L59)||
 |adms:versionInfo|literal||_todo_||
