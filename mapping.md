@@ -57,7 +57,8 @@ dct:spatial|resource|dct:Location|1|[EML#BoundingCoordinates](https://github.com
 adms:versionInfo|literal||1|[Resource#Version](https://github.com/gbif/ipt/blob/23c2648cb738fbd5ee69d5244ce41e20983f9ae8/src/main/java/org/gbif/ipt/model/Resource.java#L422)|`5.2`
 adms:versionNotes|literal||1|[Resource#ChangeSummary](https://github.com/gbif/ipt/blob/23c2648cb738fbd5ee69d5244ce41e20983f9ae8/src/main/java/org/gbif/ipt/model/Resource.java#L432)|`Update creators, datasetID and occurrenceIDs.`
 adms:contactPoint|resource|vcard:Kind|M|[EML#Contacts](https://github.com/gbif/gbif-metadata-profile/blob/3c312d84f62fb3efbeca08e4fc9178ac4dfe5397/src/main/java/org/gbif/metadata/eml/Eml.java#L661) (not creators)|`[a vcard:Individual; vcard:fn "Eric Stienen"; vcard:hasEmail <mailto:eric.stienen@inbo.be>]`
-dcat:landingPage|resource||1|Resource URL or DOI|`http://data.inbo.be/ipt/resource?r=bird-tracking-gull-occurrences`
+dcat:landingPage|resource||1|Resource URL|`http://data.inbo.be/ipt/resource?r=bird-tracking-gull-occurrences`
+foaf:homepage|resource||1|[EML#HomepageURL](https://github.com/gbif/gbif-metadata-profile/blob/3c312d84f62fb3efbeca08e4fc9178ac4dfe5397/src/main/java/org/gbif/metadata/eml/Eml.java#L763)|`http://www.lifewatch.be/birds`
 
 ## dcat:Distribution
 
