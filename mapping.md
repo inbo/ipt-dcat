@@ -73,7 +73,7 @@ Mandatory concepts are indicated in bold.
 predicate |  resource or literal | type | IPT concept | example
 ---:|:---:|:---:|:---|:---
 **dct:description**|literal|xsd:string|static|`Darwin Core Archive`
-**dct:license**|resource|dct:LicenseDocument||https://creativecommons.org/publicdomain/zero/1.0/
+**dct:license**|resource|dct:LicenseDocument|[Resource#License](https://github.com/gbif/gbif-metadata-profile/blob/master/src/main/java/org/gbif/metadata/eml/Eml.java#L1273)|`http://creativecommons.org/publicdomain/zero/1.0/legalcode`
 **dcat:mediaType**|resource|dct:MediaTypeOrExtent|static|`application/zip`|
 **dct:format**|resource|dct:MediaTypeOrExtent|static|`dwc-a`|
 **dcat:downloadURL**|resource||URI of distribution|`http://data.inbo.be/ipt/archive.do?r=bird-tracking-gull-occurrences`
