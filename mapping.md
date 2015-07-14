@@ -23,12 +23,12 @@ Mandatory concepts are indicated in bold.
 
 predicate | resource or literal | type | IPT concept | example
 ---:|:---:|:---:|:---|:---
-**dct:title**|literal|xsd:string|[Ipt#Name](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L65)|`INBO IPT`
-**dct:description**|literal|xsd:string|[Ipt#Description](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/Ipt.java#L47)|`The INBO IPT is hosted at the Research Institute for Nature and Forest (INBO) in Brussels, Belgium.`
-**dct:publisher**|resource|foaf:Agent|`http://gbif.org/publisher/` + [Ipt#Organization:Key](http://www.gbif.org/publisher/1cd669d0-80ea-11de-a9d0-f1765f95f18b#Organization) with foaf:name [Ipt#Organization:Name](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L65)|`http://www.gbif.org/publisher/1cd669d0-80ea-11de-a9d0-f1765f95f18b#Organization` with foaf:name `Research Institute for Nature and Forest (INBO)`
+**dct:title**|literal|xsd:string|[IPT#Name](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L65)|`INBO IPT`
+**dct:description**|literal|xsd:string|[IPT#Description](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/Ipt.java#L47)|`The INBO IPT is hosted at the Research Institute for Nature and Forest (INBO) in Brussels, Belgium.`
+**dct:publisher**|resource|foaf:Agent|`http://gbif.org/publisher/` + [IPT#Organization:Key](http://www.gbif.org/publisher/1cd669d0-80ea-11de-a9d0-f1765f95f18b#Organization) with foaf:name [IPT#Organization:Name](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L65)|`http://www.gbif.org/publisher/1cd669d0-80ea-11de-a9d0-f1765f95f18b#Organization` with foaf:name `Research Institute for Nature and Forest (INBO)`
 **dcat:dataset**|resource|dcat:Dataset|`dcat:Dataset URI` we create (see below)|`http://data.inbo.be/ipt/resource?r=bird-tracking-gull-occurrences#Dataset`
-foaf:homepage|resource||[#Ipt#HomepageURL](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L49)|`http://data.inbo.be/ipt`
-dct:rights|resource||-|`https://creativecommons.org/publicdomain/zero/1.0/`
+foaf:homepage|resource||[IPT#HomepageURL](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L49)|`http://data.inbo.be/ipt`
+dct:rights|resource||static|`https://creativecommons.org/publicdomain/zero/1.0/`
 dct:issued|literal|xsd:DateTime|date of creation|
 dct:modified|literal|xsd:DateTime|date of last modification|
 dcat:themeTaxonomy|resource|skos:ConceptScheme|_todo_|
@@ -44,21 +44,21 @@ The URI for an IPT dataset will be `http://homepage-of-ipt/resource?r=dataset-na
 
 Mandatory concepts are indicated in bold.
 
-| predicate | resource or literal | type | IPT concept | example |
-|---:|:---:|:---:|:---|:---|
-|**dct:title**|literal|xsd:string|[Eml#Title](https://github.com/gbif/gbif-metadata-profile/blob/master/src/main/java/org/gbif/metadata/eml/Eml.java#L715)|Bird tracking - GPS tracking of Lesser Black-backed Gull and Herring Gull breeding at the Belgian coast|
-|**dct:description**|literal|xsd:string|[Concatenation of Eml#Description](https://github.com/gbif/gbif-metadata-profile/blob/master/src/main/java/org/gbif/metadata/eml/Eml.java#L753)|Bird tracking - GPS tracking of Lesser Black-backed Gull and Herring Gull breeding at the Belgian coast is a species occurrence dataset published by the Research Institute for Nature and Forest (INBO). The dataset curently ...|
-|dct:publisher|resource|foaf:Agent|[Resource#Organization:Key](http://www.gbif.org/publisher/1cd669d0-80ea-11de-a9d0-f1765f95f18b#Organization) as a URL with foaf:name [Resource#Organization:Name](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L65)|<http://www.gbif.org/publisher/1cd669d0-80ea-11de-a9d0-f1765f95f18b#Organization> with foaf:name Research Institute for Nature and Forest (INBO)|
-|dcat:theme|resource|skos:Concept|default to Eurovoc URI for biodiversity|
-|dcat:keyword|literal|xsd:string|[EML#Keywords](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/Ipt.java#L47)|animal movement|
-|dct:issued|literal|xsd:DateTime|date of creation||
-|dct:modified|literal|xsd:DateTime|[Resource#LastPublished](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/Resource.java#L449)|2015-05-07|
-|dct:isVersionOf|resource|dcat:Dataset|_Separate versions can be different resources which point to a generic dataset_||
-|dct:spatial|resource|dct:Location|[EML#BoundingCoordinates](https://github.com/gbif/gbif-metadata-profile/blob/master/src/main/java/org/gbif/metadata/eml/GeospatialCoverage.java#L59)|{ "type": "Polygon", "coordinates": [ [ [-25, 10], [-25, 60], [10, 60], [10, 10], [-25, 10] ] ] }|
-|adms:versionInfo|literal||_todo_||
-|adms:versionNotes|literal||Admins can enter version notes with each publication||
-|adms:contactPoint|resource|vcard:Kind|[EML#Contacts](https://github.com/gbif/gbif-metadata-profile/blob/3c312d84f62fb3efbeca08e4fc9178ac4dfe5397/src/main/java/org/gbif/metadata/eml/Eml.java#L356)|Eric Stienen, Peter Desmet|
-|dcat:landingPage|resource|||http://data.inbo.be/ipt/resource?r=bird-tracking-gull-occurrences|
+predicate | resource or literal | type | IPT concept | example
+---:|:---:|:---:|:---|:---
+**dct:title**|literal|xsd:string|[EML#Title](https://github.com/gbif/gbif-metadata-profile/blob/master/src/main/java/org/gbif/metadata/eml/Eml.java#L715)|`Bird tracking - GPS tracking of Lesser Black-backed Gull and Herring Gull breeding at the Belgian coast`
+**dct:description**|literal|xsd:string|[EML#Description](https://github.com/gbif/gbif-metadata-profile/blob/master/src/main/java/org/gbif/metadata/eml/Eml.java#L753) concatenated|`Bird tracking - GPS tracking of Lesser Black-backed Gull and Herring Gull breeding at the Belgian coast is a species occurrence dataset published by the Research Institute for Nature and Forest (INBO). The dataset curently ...`
+dct:publisher|resource|foaf:Agent|`http://gbif.org/publisher/` + [Resource#Organization:Key](http://www.gbif.org/publisher/1cd669d0-80ea-11de-a9d0-f1765f95f18b#Organization) with foaf:name [Resource#Organization:Name](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L65)|`http://www.gbif.org/publisher/1cd669d0-80ea-11de-a9d0-f1765f95f18b#Organization` with foaf:name `Research Institute for Nature and Forest (INBO)`
+dcat:theme|resource|skos:Concept|default to Eurovoc URI for biodiversity|
+dcat:keyword|literal|xsd:string|[EML#Keywords](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/Ipt.java#L47)|`animal movement`
+dct:issued|literal|xsd:DateTime|date of creation|
+dct:modified|literal|xsd:DateTime|[Resource#LastPublished](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/Resource.java#L449)|`2015-05-07`
+dct:isVersionOf|resource|dcat:Dataset|_Separate versions can be different resources which point to a generic dataset_|
+dct:spatial|resource|dct:Location|[EML#BoundingCoordinates](https://github.com/gbif/gbif-metadata-profile/blob/master/src/main/java/org/gbif/metadata/eml/GeospatialCoverage.java#L59)|`{ "type": "Polygon", "coordinates": [ [ [-25, 10], [-25, 60], [10, 60], [10, 10], [-25, 10] ] ] }`
+adms:versionInfo|literal||_todo_|
+adms:versionNotes|literal||Admins can enter version notes with each publication|
+adms:contactPoint|resource|vcard:Kind|[EML#Contacts](https://github.com/gbif/gbif-metadata-profile/blob/3c312d84f62fb3efbeca08e4fc9178ac4dfe5397/src/main/java/org/gbif/metadata/eml/Eml.java#L356)|`Eric Stienen, Peter Desmet`
+dcat:landingPage|resource|||`http://data.inbo.be/ipt/resource?r=bird-tracking-gull-occurrences`
 
 ## dcat:Distribution
 
@@ -70,10 +70,10 @@ For each dataset, we'll link to 1 distribution: the Darwin Core Zip file. The UR
 
 Mandatory concepts are indicated in bold.
 
-| predicate |  resource or literal | type | IPT concept | example |
-|---:|:---:|:---:|:---|:---|
-|**dct:description**|literal|xsd:string|`Darwin Core Archive`||
-|**dct:license**|resource|dct:LicenseDocument||https://creativecommons.org/publicdomain/zero/1.0/|
-|**dcat:mediaType**|resource|dct:MediaTypeOrExtent||`application/zip`||
-|**dct:format**|resource|dct:MediaTypeOrExtent||`dwc-a`||
-|**dcat:downloadURL**|resource||same URI|http://data.inbo.be/ipt/archive.do?r=bird-tracking-gull-occurrences|
+predicate |  resource or literal | type | IPT concept | example
+---:|:---:|:---:|:---|:---
+**dct:description**|literal|xsd:string|static|`Darwin Core Archive`
+**dct:license**|resource|dct:LicenseDocument||https://creativecommons.org/publicdomain/zero/1.0/
+**dcat:mediaType**|resource|dct:MediaTypeOrExtent|static|`application/zip`|
+**dct:format**|resource|dct:MediaTypeOrExtent|static|`dwc-a`|
+**dcat:downloadURL**|resource||URI of distribution|`http://data.inbo.be/ipt/archive.do?r=bird-tracking-gull-occurrences`
