@@ -23,16 +23,16 @@ Mandatory concepts are indicated in bold.
 
 predicate | resource or literal | type | # | IPT concept | example
 ---:|:---:|:---:|:---:|:---|:---
-**dct:title**|literal|xsd:string|1|[IPT#Name](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L65)|`INBO IPT`
-**dct:description**|literal|xsd:string|1|[IPT#Description](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/Ipt.java#L47)|`The INBO IPT is hosted at the Research Institute for Nature and Forest (INBO) in Brussels, Belgium.`
-**dct:publisher**|resource|foaf:Agent|1|`http://gbif.org/publisher/` + [IPT#Organization:Key](http://www.gbif.org/publisher/1cd669d0-80ea-11de-a9d0-f1765f95f18b#Organization) with foaf:name [IPT#Organization:Name](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L65)|`http://www.gbif.org/publisher/1cd669d0-80ea-11de-a9d0-f1765f95f18b#Organization` with foaf:name `Research Institute for Nature and Forest (INBO)`
+**dct:title**|literal|xsd:string|1|[IPT#Name](https://github.com/gbif/ipt/blob/acb9ed2a57bda3bbebacd48c0eb777dfdba8437a/src/main/java/org/gbif/ipt/model/AgentBase.java#L65)|`INBO IPT`
+**dct:description**|literal|xsd:string|1|[IPT#Description](https://github.com/gbif/ipt/blob/acb9ed2a57bda3bbebacd48c0eb777dfdba8437a/src/main/java/org/gbif/ipt/model/Ipt.java#L47)|`The INBO IPT is hosted at the Research Institute for Nature and Forest (INBO) in Brussels, Belgium.`
+**dct:publisher**|resource|foaf:Agent|1|`http://gbif.org/publisher/` + [IPT#Organization:Key](https://github.com/gbif/ipt/blob/acb9ed2a57bda3bbebacd48c0eb777dfdba8437a/src/main/java/org/gbif/ipt/model/AgentBase.java#L57) with foaf:name [IPT#Organization:Name](https://github.com/gbif/ipt/blob/acb9ed2a57bda3bbebacd48c0eb777dfdba8437a/src/main/java/org/gbif/ipt/model/AgentBase.java#L65)|`http://www.gbif.org/publisher/1cd669d0-80ea-11de-a9d0-f1765f95f18b#Organization` with foaf:name `Research Institute for Nature and Forest (INBO)`
 **dcat:dataset**|resource|dcat:Dataset|M|`dcat:Dataset URI` we create (see below)|`http://data.inbo.be/ipt/resource?r=bird-tracking-gull-occurrences#Dataset`
 foaf:homepage|resource||1|[IPT#HomepageURL](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L49)|`http://data.inbo.be/ipt`
 dct:rights|resource||1|static|`https://creativecommons.org/publicdomain/zero/1.0/`
 dct:issued|literal|xsd:DateTime|1|date of creation|
 dct:modified|literal|xsd:DateTime|1|date of last modification|
 dcat:themeTaxonomy|resource|skos:ConceptScheme|1|static|`http://eurovoc.europa.eu/5463`
-dct:spatial|resource|dct:Location|1|[IPT#Latitude](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/config/AppConfig.java#L145), [IPT#Longitude](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/config/AppConfig.java#L157)|`{ "type": "Point", "coordinates": [ 4.334187, 50.842133 ] }`
+dct:spatial|resource|dct:Location|1|[IPT#Latitude](https://github.com/gbif/ipt/blob/89172698ee7bd3934ea4fbd9e18288f11e6448db/src/main/java/org/gbif/ipt/config/AppConfig.java#L146), [IPT#Longitude](https://github.com/gbif/ipt/blob/89172698ee7bd3934ea4fbd9e18288f11e6448db/src/main/java/org/gbif/ipt/config/AppConfig.java#L158)|`{ "type": "Point", "coordinates": [ 4.334187, 50.842133 ] }`
 
 ## dcat:Dataset
 
