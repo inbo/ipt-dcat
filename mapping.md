@@ -28,8 +28,8 @@ predicate | resource or literal | type | # | IPT concept | example
 **dct:publisher**|resource|foaf:Agent|1|`http://www.gbif.org/publisher/` + [IPT#Organization:Key](https://github.com/gbif/ipt/blob/acb9ed2a57bda3bbebacd48c0eb777dfdba8437a/src/main/java/org/gbif/ipt/model/AgentBase.java#L57) with foaf:name [IPT#Organization:Name](https://github.com/gbif/ipt/blob/acb9ed2a57bda3bbebacd48c0eb777dfdba8437a/src/main/java/org/gbif/ipt/model/AgentBase.java#L65)|`http://www.gbif.org/publisher/1cd669d0-80ea-11de-a9d0-f1765f95f18b#Organization` with foaf:name `Research Institute for Nature and Forest (INBO)`
 **dct:title**|literal|xsd:string|1|[IPT#Name](https://github.com/gbif/ipt/blob/acb9ed2a57bda3bbebacd48c0eb777dfdba8437a/src/main/java/org/gbif/ipt/model/AgentBase.java#L65)|`INBO IPT`
 foaf:homepage|resource||1|[IPT#HomepageURL](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L49)|`http://data.inbo.be/ipt`
-dct:issued|literal|xsd:DateTime|1|date of creation|
-dct:modified|literal|xsd:DateTime|1|date of last modification|
+dct:issued|literal|xsd:DateTime|1|First [Resource#Created](https://github.com/gbif/ipt/blob/23c2648cb738fbd5ee69d5244ce41e20983f9ae8/src/main/java/org/gbif/ipt/model/Resource.java#L339)|`2012-05-04`
+dct:modified|literal|xsd:DateTime|1|Latest [Resource#LastPublished](https://github.com/gbif/ipt/blob/23c2648cb738fbd5ee69d5244ce41e20983f9ae8/src/main/java/org/gbif/ipt/model/Resource.java#L449)|`2015-05-07`
 dct:rights|resource||1|static|`https://creativecommons.org/publicdomain/zero/1.0/`
 dct:spatial|resource|dct:Location|1|[IPT#Latitude](https://github.com/gbif/ipt/blob/89172698ee7bd3934ea4fbd9e18288f11e6448db/src/main/java/org/gbif/ipt/config/AppConfig.java#L146), [IPT#Longitude](https://github.com/gbif/ipt/blob/89172698ee7bd3934ea4fbd9e18288f11e6448db/src/main/java/org/gbif/ipt/config/AppConfig.java#L158)|`{ "type": "Point", "coordinates": [ 4.334187, 50.842133 ] }`
 dcat:themeTaxonomy|resource|skos:ConceptScheme|1|static|`http://eurovoc.europa.eu/5463`
