@@ -32,7 +32,7 @@ Mandatory concepts are indicated in bold.
 |dct:issued|literal|xsd:DateTime|date of creation||
 |dct:modified|literal|xsd:DateTime|date of last modification||
 |dcat:themeTaxonomy|resource|skos:ConceptScheme|_todo_||
-|dct:spatial|resource|dct:Location|[IPT#Latitude](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/config/AppConfig.java#L145), [IPT#Longitude](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/config/AppConfig.java#L157)||
+|dct:spatial|resource|dct:Location|[IPT#Latitude](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/config/AppConfig.java#L145), [IPT#Longitude](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/config/AppConfig.java#L157)|{ "type": "Point", "coordinates": [ 4.334187, 50.842133 ] }|
 
 ## dcat:Dataset
 
@@ -54,7 +54,7 @@ Mandatory concepts are indicated in bold.
 |dct:issued|literal|xsd:DateTime|date of creation||
 |dct:modified|literal|xsd:DateTime|[Resource#LastPublished](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/Resource.java#L449)|2015-05-07|
 |dct:isVersionOf|resource|dcat:Dataset|_Separate versions can be different resources which point to a generic dataset_||
-|dct:spatial|resource|dct:Location|[EML#BoundingCoordinates](https://github.com/gbif/gbif-metadata-profile/blob/master/src/main/java/org/gbif/metadata/eml/GeospatialCoverage.java#L59)||
+|dct:spatial|resource|dct:Location|[EML#BoundingCoordinates](https://github.com/gbif/gbif-metadata-profile/blob/master/src/main/java/org/gbif/metadata/eml/GeospatialCoverage.java#L59)|{ "type": "Polygon", "coordinates": [ [ [-25, 10], [-25, 60], [10, 60], [10, 10], [-25, 10] ] ] }|
 |adms:versionInfo|literal||_todo_||
 |adms:versionNotes|literal||Admins can enter version notes with each publication||
 |adms:contactPoint|resource|vcard:Kind|[EML#Contacts](https://github.com/gbif/gbif-metadata-profile/blob/3c312d84f62fb3efbeca08e4fc9178ac4dfe5397/src/main/java/org/gbif/metadata/eml/Eml.java#L356)|Eric Stienen, Peter Desmet|
