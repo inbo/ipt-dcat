@@ -25,7 +25,7 @@ Mandatory concepts are indicated in bold.
 |---:|:---:|:---:|:---|:---|
 |**dct:title**|literal|xsd:string|[Ipt#Name](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L65)|INBO IPT|
 |**dct:description**|literal|xsd:string|[Ipt#Description](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/Ipt.java#L47)|The INBO IPT is hosted at the Research Institute for Nature and Forest (INBO) in Brussels, Belgium.|
-|**dct:publisher**|resource|foaf:Agent|with foaf:name [Organisation#Name](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L65)|Research Institute for Nature and Forest (INBO)|
+|**dct:publisher**|resource|foaf:Agent|with foaf:name [Ipt#OrganizationName](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L65)|Research Institute for Nature and Forest (INBO)|
 |**dcat:dataset**|resource|dcat:Dataset|links to dcat:Dataset URIs we create|http://data.inbo.be/ipt/resource?r=bird-tracking-gull-occurrences#Dataset|
 |foaf:homepage|resource||[#Ipt#HomepageURL](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L49)|http://data.inbo.be/ipt|
 |dct:rights|resource|||https://creativecommons.org/publicdomain/zero/1.0/|
@@ -48,6 +48,7 @@ Mandatory concepts are indicated in bold.
 |---:|:---:|:---:|:---|:---|
 |**dct:title**|literal|xsd:string|[Eml#Title](https://github.com/gbif/gbif-metadata-profile/blob/master/src/main/java/org/gbif/metadata/eml/Eml.java#L715)|Bird tracking - GPS tracking of Lesser Black-backed Gull and Herring Gull breeding at the Belgian coast|
 |**dct:description**|literal|xsd:string|[Concatenation of Eml#Description](https://github.com/gbif/gbif-metadata-profile/blob/master/src/main/java/org/gbif/metadata/eml/Eml.java#L753)|Bird tracking - GPS tracking of Lesser Black-backed Gull and Herring Gull breeding at the Belgian coast is a species occurrence dataset published by the Research Institute for Nature and Forest (INBO). The dataset curently ...|
+|dct:publisher|resource|foaf:Agent|with foaf:name [Resource#OrganizationName](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L65)|Research Institute for Nature and Forest (INBO)|
 |dcat:theme|resource|skos:Concept|default to Eurovoc URI for biodiversity|
 |dcat:keyword|literal|xsd:string|[EML#Keywords](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/Ipt.java#L47)|animal movement|
 |dct:issued|literal|xsd:DateTime|date of creation||
