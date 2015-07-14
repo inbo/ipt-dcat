@@ -53,10 +53,9 @@ dcat:theme|resource|skos:Concept|1|static|`http://eurovoc.europa.eu/5463`
 dcat:keyword|literal|xsd:string|M|[EML#Keywords](https://github.com/gbif/gbif-metadata-profile/blob/3c312d84f62fb3efbeca08e4fc9178ac4dfe5397/src/main/java/org/gbif/metadata/eml/Eml.java#L511)|`animal movement`
 dct:issued|literal|xsd:DateTime|1|[Resource#Created](https://github.com/gbif/ipt/blob/23c2648cb738fbd5ee69d5244ce41e20983f9ae8/src/main/java/org/gbif/ipt/model/Resource.java#L339)|`2014-05-15`
 dct:modified|literal|xsd:DateTime|1|[Resource#LastPublished](https://github.com/gbif/ipt/blob/23c2648cb738fbd5ee69d5244ce41e20983f9ae8/src/main/java/org/gbif/ipt/model/Resource.java#L449)|`2015-05-07`
-dct:isVersionOf|resource|dcat:Dataset|1|_Separate versions can be different resources which point to a generic dataset_|
 dct:spatial|resource|dct:Location|1|[EML#BoundingCoordinates](https://github.com/gbif/gbif-metadata-profile/blob/c1f766447fbf706f628b98c5e1c88f1ebdd5fb35/src/main/java/org/gbif/metadata/eml/GeospatialCoverage.java#L59)|`{ "type": "Polygon", "coordinates": [ [ [-25, 10], [-25, 60], [10, 60], [10, 10], [-25, 10] ] ] }`
-adms:versionInfo|literal||1|[Resource#LastPublishedVersionsVersion](https://github.com/gbif/ipt/blob/23c2648cb738fbd5ee69d5244ce41e20983f9ae8/src/main/java/org/gbif/ipt/model/Resource.java#L422)|`5.2`
-adms:versionNotes|literal||1|[Resource#LastPublishedVersionsChangeSummary](https://github.com/gbif/ipt/blob/23c2648cb738fbd5ee69d5244ce41e20983f9ae8/src/main/java/org/gbif/ipt/model/Resource.java#L432)|`Update creators, datasetID and occurrenceIDs.`
+adms:versionInfo|literal||1|[Resource#LastPublishedVersions:Version](https://github.com/gbif/ipt/blob/23c2648cb738fbd5ee69d5244ce41e20983f9ae8/src/main/java/org/gbif/ipt/model/Resource.java#L422)|`5.2`
+adms:versionNotes|literal||1|[Resource#LastPublishedVersions:ChangeSummary](https://github.com/gbif/ipt/blob/23c2648cb738fbd5ee69d5244ce41e20983f9ae8/src/main/java/org/gbif/ipt/model/Resource.java#L432)|`Update creators, datasetID and occurrenceIDs.`
 adms:contactPoint|resource|vcard:Kind|M|[EML#Contacts](https://github.com/gbif/gbif-metadata-profile/blob/3c312d84f62fb3efbeca08e4fc9178ac4dfe5397/src/main/java/org/gbif/metadata/eml/Eml.java#L661) (not creators)|`[a vcard:Individual; vcard:fn "Eric Stienen"; vcard:hasEmail <mailto:eric.stienen@inbo.be>]`
 dcat:landingPage|resource||1|Resource URL or DOI|`http://data.inbo.be/ipt/resource?r=bird-tracking-gull-occurrences`
 
