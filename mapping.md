@@ -60,6 +60,7 @@ dct:spatial|resource|dct:Location|1|[EML#BoundingCoordinates](https://github.com
 dcat:theme|resource|skos:Concept|1|static|`http://eurovoc.europa.eu/5463`
 adms:versionInfo|literal||1|[Resource#Version](https://github.com/gbif/ipt/blob/23c2648cb738fbd5ee69d5244ce41e20983f9ae8/src/main/java/org/gbif/ipt/model/Resource.java#L422)|`5.2`
 adms:versionNotes|literal||1|[Resource#ChangeSummary](https://github.com/gbif/ipt/blob/23c2648cb738fbd5ee69d5244ce41e20983f9ae8/src/main/java/org/gbif/ipt/model/Resource.java#L432)|`Update creators, datasetID and occurrenceIDs.`
+dcat:distribution|resource|dcat:Distribution|1|DistributionURL - Link to the dwc-a|`http://data.inbo.be/ipt/archive.do?r=bird-tracking-gull-occurrences`
 
 ## dcat:Distribution
 
