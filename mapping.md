@@ -32,7 +32,8 @@ dct:issued|literal|xsd:DateTime|1|First [Resource#Created](https://github.com/gb
 dct:modified|literal|xsd:DateTime|1|Latest [Resource#LastPublished](https://github.com/gbif/ipt/blob/23c2648cb738fbd5ee69d5244ce41e20983f9ae8/src/main/java/org/gbif/ipt/model/Resource.java#L449)|`2015-05-07`
 dct:license|resource||1|static|`https://creativecommons.org/publicdomain/zero/1.0/`
 dct:spatial|resource|dct:Location|1|[IPT#Latitude](https://github.com/gbif/ipt/blob/89172698ee7bd3934ea4fbd9e18288f11e6448db/src/main/java/org/gbif/ipt/config/AppConfig.java#L146), [IPT#Longitude](https://github.com/gbif/ipt/blob/89172698ee7bd3934ea4fbd9e18288f11e6448db/src/main/java/org/gbif/ipt/config/AppConfig.java#L158)|`{ "type": "Point", "coordinates": [ 4.334187, 50.842133 ] }`
-dcat:themeTaxonomy|resource|skos:ConceptScheme|1|static|'<http://eurovoc.europa.eu/218403> a skos:ConceptScheme ; dct:title "biodiversity"@en .'
+dcat:themeTaxonomy|resource|skos:ConceptScheme|1|static|`<http://eurovoc.europa.eu/218403> a skos:ConceptScheme ; dct:title "biodiversity"@en .`
+dct:language|resource|dct:LinguisticSystem|1|static|`dct:language <http://id.loc.gov/vocabulary/iso639-1/en> .`
 
 ## dcat:Dataset
 
@@ -61,6 +62,7 @@ dcat:theme|resource|skos:Concept|1|static|`http://eurovoc.europa.eu/5463`
 adms:versionInfo|literal||1|[Resource#Version](https://github.com/gbif/ipt/blob/23c2648cb738fbd5ee69d5244ce41e20983f9ae8/src/main/java/org/gbif/ipt/model/Resource.java#L422)|`5.2`
 adms:versionNotes|literal||1|[Resource#ChangeSummary](https://github.com/gbif/ipt/blob/23c2648cb738fbd5ee69d5244ce41e20983f9ae8/src/main/java/org/gbif/ipt/model/Resource.java#L432)|`Update creators, datasetID and occurrenceIDs.`
 dcat:distribution|resource|dcat:Distribution|1|DistributionURL - Link to the dwc-a|`http://data.inbo.be/ipt/archive.do?r=bird-tracking-gull-occurrences`
+dct:language|resource|dct:LinguisticSystem|1|[Eml#Language](https://github.com/gbif/gbif-metadata-profile/blob/3c312d84f62fb3efbeca08e4fc9178ac4dfe5397/src/main/java/org/gbif/metadata/eml/Eml.java#L519)|`dct:language <http://id.loc.gov/vocabulary/iso639-1/en> .`
 
 ## dcat:Distribution
 
