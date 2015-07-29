@@ -30,7 +30,7 @@ predicate | resource or literal | type | # | IPT concept | example
 foaf:homepage|resource||1|[Host#HomepageURL](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L49)|`http://data.inbo.be/ipt`
 dct:issued|literal|xsd:DateTime|1|First [Resource#Created](https://github.com/gbif/ipt/blob/23c2648cb738fbd5ee69d5244ce41e20983f9ae8/src/main/java/org/gbif/ipt/model/Resource.java#L339)|`2012-05-04`
 dct:modified|literal|xsd:DateTime|1|Latest [Resource#LastPublished](https://github.com/gbif/ipt/blob/23c2648cb738fbd5ee69d5244ce41e20983f9ae8/src/main/java/org/gbif/ipt/model/Resource.java#L449)|`2015-05-07`
-dct:rights|resource||1|static|`https://creativecommons.org/publicdomain/zero/1.0/`
+dct:license|resource||1|static|`https://creativecommons.org/publicdomain/zero/1.0/`
 dct:spatial|resource|dct:Location|1|[IPT#Latitude](https://github.com/gbif/ipt/blob/89172698ee7bd3934ea4fbd9e18288f11e6448db/src/main/java/org/gbif/ipt/config/AppConfig.java#L146), [IPT#Longitude](https://github.com/gbif/ipt/blob/89172698ee7bd3934ea4fbd9e18288f11e6448db/src/main/java/org/gbif/ipt/config/AppConfig.java#L158)|`{ "type": "Point", "coordinates": [ 4.334187, 50.842133 ] }`
 dcat:themeTaxonomy|resource|skos:ConceptScheme|1|static|'<http://eurovoc.europa.eu/218403> a skos:ConceptScheme ; dct:title "biodiversity"@en .'
 
