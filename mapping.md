@@ -16,6 +16,7 @@ adms:| `http://www.w3.org/ns/adms#`
 ### URI
 
 The URI for the IPT catalog will be `http://homepage-of-ipt#Catalog` (e.g. http://data.inbo.be/ipt#Catalog). The URI will become dereferenceable using RDFa. In RDFa, a `rdfs:seeAlso` link will be given to a document which contains the entire DCAT feed.
+Only public published resources with a license are added to the DCAT feed.
 
 ### Concepts
 
@@ -25,9 +26,9 @@ predicate | resource or literal | type | # | IPT concept | example
 ---:|:---:|:---:|:---:|:---|:---
 **dcat:dataset**|resource|dcat:Dataset|M|`dcat:Dataset URI` we create (see below)|`http://data.inbo.be/ipt/resource?r=bird-tracking-gull-occurrences#Dataset`
 **dct:description**|literal|xsd:string|1|[Host#Description](https://github.com/gbif/ipt/blob/acb9ed2a57bda3bbebacd48c0eb777dfdba8437a/src/main/java/org/gbif/ipt/model/AgentBase.java#L41)|`The INBO IPT is hosted at the Research Institute for Nature and Forest (INBO) in Brussels, Belgium.`
-**dct:publisher**|resource|foaf:Agent|1|`http://www.gbif.org/publisher/` + [Host#Organization:Key](https://github.com/gbif/ipt/blob/acb9ed2a57bda3bbebacd48c0eb777dfdba8437a/src/main/java/org/gbif/ipt/model/AgentBase.java#L57) with foaf:name [Host#Organization:Name](https://github.com/gbif/ipt/blob/acb9ed2a57bda3bbebacd48c0eb777dfdba8437a/src/main/java/org/gbif/ipt/model/AgentBase.java#L65)|`http://www.gbif.org/publisher/1cd669d0-80ea-11de-a9d0-f1765f95f18b#Organization` with foaf:name `Research Institute for Nature and Forest (INBO)`
+**dct:publisher**|resource|foaf:Agent|1|`http://www.gbif.org/publisher/` + [Host#Organization:Key](https://github.com/gbif/ipt/blob/acb9ed2a57bda3bbebacd48c0eb777dfdba8437a/src/main/java/org/gbif/ipt/model/AgentBase.java#L57) with foaf:name [Host#Organization:Name](https://github.com/gbif/ipt/blob/acb9ed2a57bda3bbebacd48c0eb777dfdba8437a/src/main/java/org/gbif/ipt/model/AgentBase.java#L65) and [Host#Homepage](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L49)|`http://www.gbif.org/publisher/1cd669d0-80ea-11de-a9d0-f1765f95f18b#Organization` with foaf:name `Research Institute for Nature and Forest (INBO)` and foaf:homepage `http://data.inbo.be/ipt`
 **dct:title**|literal|xsd:string|1|[Host#Name](https://github.com/gbif/ipt/blob/acb9ed2a57bda3bbebacd48c0eb777dfdba8437a/src/main/java/org/gbif/ipt/model/AgentBase.java#L65)|`INBO IPT`
-foaf:homepage|resource||1|[Host#HomepageURL](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/model/AgentBase.java#L49)|`http://data.inbo.be/ipt`
+foaf:homepage|resource||1|[baseURL](https://github.com/gbif/ipt/blob/master/src/main/java/org/gbif/ipt/config/AppConfig.java#L134)|`baseURL`
 dct:issued|literal|xsd:DateTime|1|First [Resource#Created](https://github.com/gbif/ipt/blob/23c2648cb738fbd5ee69d5244ce41e20983f9ae8/src/main/java/org/gbif/ipt/model/Resource.java#L339)|`2012-05-04`
 dct:modified|literal|xsd:DateTime|1|Latest [Resource#LastPublished](https://github.com/gbif/ipt/blob/23c2648cb738fbd5ee69d5244ce41e20983f9ae8/src/main/java/org/gbif/ipt/model/Resource.java#L449)|`2015-05-07`
 dct:license|resource||1|static|`https://creativecommons.org/publicdomain/zero/1.0/`
@@ -62,7 +63,7 @@ dcat:theme|resource|skos:Concept|1|static|`http://eurovoc.europa.eu/5463`
 adms:versionInfo|literal||1|[Resource#Version](https://github.com/gbif/ipt/blob/23c2648cb738fbd5ee69d5244ce41e20983f9ae8/src/main/java/org/gbif/ipt/model/Resource.java#L422)|`5.2`
 adms:versionNotes|literal||1|[Resource#ChangeSummary](https://github.com/gbif/ipt/blob/23c2648cb738fbd5ee69d5244ce41e20983f9ae8/src/main/java/org/gbif/ipt/model/Resource.java#L432)|`Update creators, datasetID and occurrenceIDs.`
 dcat:distribution|resource|dcat:Distribution|1|DistributionURL - Link to the dwc-a|`http://data.inbo.be/ipt/archive.do?r=bird-tracking-gull-occurrences`
-dct:language|resource|dct:LinguisticSystem|1|[Eml#Language](https://github.com/gbif/gbif-metadata-profile/blob/3c312d84f62fb3efbeca08e4fc9178ac4dfe5397/src/main/java/org/gbif/metadata/eml/Eml.java#L519)|`dct:language <http://id.loc.gov/vocabulary/iso639-1/en> .`
+dct:language|resource|dct:LinguisticSystem|1|[Eml#MetaLanguage](https://github.com/gbif/gbif-metadata-profile/blob/3c312d84f62fb3efbeca08e4fc9178ac4dfe5397/src/main/java/org/gbif/metadata/eml/Eml.java#L550)|`dct:language <http://id.loc.gov/vocabulary/iso639-1/eng> .`
 
 ## dcat:Distribution
 
