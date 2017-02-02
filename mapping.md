@@ -77,6 +77,7 @@ Mandatory concepts are indicated in bold.
 
 predicate |  resource or literal | type | # | IPT concept | example
 ---:|:---:|:---:|:---:|:---|:---
+dct:title|literal|xsd:string|1|"DwC-A of " + [EML#Title](https://github.com/gbif/gbif-metadata-profile/blob/3c312d84f62fb3efbeca08e4fc9178ac4dfe5397/src/main/java/org/gbif/metadata/eml/Eml.java#L718)|`DwC-A of Bird tracking - GPS tracking of Lesser Black-backed Gull and Herring Gull breeding at the Belgian coast`
 dct:description|literal|xsd:string|1|static|`Darwin Core Archive`
 dcat:downloadURL|resource||1|URI of distribution|`http://data.inbo.be/ipt/archive.do?r=bird-tracking-gull-occurrences`
 dcat:accessURL|resource||1|URL of downloadlocation|`http://data.inbo.be/ipt/resource?r=bird-tracking-gull-occurrences`
